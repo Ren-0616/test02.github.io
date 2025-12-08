@@ -1,4 +1,5 @@
-/* * test.css
+/*
+ * test.css
  * 市川市紹介ページのスタイル設定 
  */
 
@@ -9,7 +10,7 @@ h1 {
     font-size: 2.5em;
     margin-top: 0.67em;
     margin-bottom: 0.67em;
-    color: #333; /* 濃いグレーで読みやすく */
+    color: #333;
 }
 
 /* 中見出し */
@@ -17,28 +18,16 @@ h2 {
     font-size: 1.8em;
     margin-top: 0.83em;
     margin-bottom: 0.83em;
-    border-bottom: 2px solid #ddd; /* 下線を入れて区切りを明確に */
+    border-bottom: 2px solid #ddd;
 }
 
-/* 小見出し (h3, h4, h5) */
-h3 {
-    font-size: 1.3em;
-    margin-top: 1.33em;
-    margin-bottom: 1.33em;
+/* 小見出し (h3, h4, h5) をまとめて同じサイズにする */
+h3, h4, h5 {
+    font-size: 1.3em;  /* ここでサイズを統一（1.3倍） */
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    font-weight: bold; /* 太字にして見出しらしく */
 }
-
-h4 {
-    font-size: 1.3em;
-    margin-top: 1.33em;
-    margin-bottom: 1.33em;
-}
-
-h5 {
-    font-size: 1.3em;
-    margin-top: 1.33em;
-    margin-bottom: 1.33em;
-}
-
 
 /* === 段落のスタイル === */
 
@@ -49,13 +38,11 @@ p {
     margin: 1em 0;
 }
 
-/* * 独自タグ (p1, p2, p3) の設定 
- * まとめて指定することでサイズを統一します
- */
+/* 独自タグ (p1, p2, p3) の設定 */
 p1, p2, p3 {
-    display: block;    /* 重要：これを書かないと改行されず横につながってしまいます */
+    display: block;    /* ブロック要素にして改行させる */
     font-size: 1em;    /* pタグと同じ大きさ */
     line-height: 1.6;  /* pタグと同じ行間 */
-    margin-top: 1em;   /* 上の余白 */
-    margin-bottom: 1em;/* 下の余白 */
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
