@@ -1,31 +1,61 @@
-/*
- * test.css
- * ページの見出しと段落の文字サイズを設定
+/* * test.css
+ * 市川市紹介ページのスタイル設定 
  */
 
-/* H1 (大見出し) のスタイル */
+/* === 見出しのスタイル === */
+
+/* 大見出し */
 h1 {
     font-size: 2.5em;
     margin-top: 0.67em;
     margin-bottom: 0.67em;
+    color: #333; /* 濃いグレーで読みやすく */
 }
 
-/* H2 (中見出し) のスタイル */
+/* 中見出し */
 h2 {
     font-size: 1.8em;
     margin-top: 0.83em;
     margin-bottom: 0.83em;
+    border-bottom: 2px solid #ddd; /* 下線を入れて区切りを明確に */
 }
 
-/* P (通常の段落) のスタイル */
+/* 小見出し (h3, h4, h5) */
+h3 {
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+h4 {
+    font-size: 1.3em;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+}
+
+h5 {
+    font-size: 1.1em;
+    margin-top: 1.67em;
+    margin-bottom: 1.67em;
+}
+
+
+/* === 段落のスタイル === */
+
+/* 通常の p タグ */
 p {
     font-size: 1em;
     line-height: 1.6;
+    margin: 1em 0;
 }
 
-/* --- 追加箇所 --- */
-/* p1, p2, p3 のサイズを統一して設定 */
-.p1, .p2, .p3 {
-    font-size: 1em; /* すべて同じ 1em に設定 */
-    line-height: 1.6; /* 読みやすさも揃える */
+/* * 独自タグ (p1, p2, p3) の設定 
+ * まとめて指定することでサイズを統一します
+ */
+p1, p2, p3 {
+    display: block;    /* 重要：これを書かないと改行されず横につながってしまいます */
+    font-size: 1em;    /* pタグと同じ大きさ */
+    line-height: 1.6;  /* pタグと同じ行間 */
+    margin-top: 1em;   /* 上の余白 */
+    margin-bottom: 1em;/* 下の余白 */
 }
